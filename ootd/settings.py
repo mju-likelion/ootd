@@ -1,4 +1,5 @@
 from pathlib import Path
+import os, my_settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -63,16 +64,7 @@ WSGI_APPLICATION = 'ootd.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'ootd',
-        'USER':'root',
-        'PASSWORD':'dnflwlq1!',
-        'HOST':'localhost',
-        'PORT' : '3306',
-    }
-}
+DATABASES = my_settings.DATABASES
 
 
 # Password validation
@@ -113,3 +105,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'ootdapp', 'static')
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

@@ -1,0 +1,99 @@
+{% load static %}
+<head>
+    <title>Startled Corporate Category Bootstrap responsive Web Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Startled a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css" media="screen" property="" />
+    <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header-top">
+        <header class="mainheader">
+            <nav class="navbar second navbar-expand-lg navbar-light bg-light pagescrollfix">
+                <a class="navbar-brand pagescrolldisplay" href="{% url 'home'%}"><i class="fab fa-magento"></i></a>
+                <div class="collapse navbar-collapse navbar-toggle" id="navbarNavAltMarkup1">
+                    
+                    <a class="nav-link request text-uppercase scrolldemo ml-auto pagescrolldisplay" href="#" data-toggle="modal" data-target="#exampleModalCenter"> Login</a>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light RWDpagescrollfix">
+                <h1><a class="navbar-brand" href="{% url 'home'%}"><i class="fab fa-magento"></i> OOTD</a></h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-toggle" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse navbar-toggle " id="navbarNavAltMarkup">
+                    <ul class="navbar-nav mx-auto">
+                        
+                        <li><a class="nav-link text-uppercase" href="about.html">feedback</a></li>
+                        <li><a class="nav-link text-uppercase" href="price.html">market</a></li>
+                        <li> <a class="nav-link text-uppercase" href="contact.html">ranking</a></li>
+                    </ul>
+                    <div class="top-info text-left">
+                        <ul>
+                            <li><i class="fas fa-phone-volume"></i> 12345678099</li>
+                            <li class="number-phone"><a class="nav-link request text-uppercase font-weight-bold" href="#" data-toggle="modal" data-target="#exampleModalCenter">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- /header-top-->
+        <!-- /banner-info-->
+        <div class="banner-content text-center text-white">
+            <h3>Outfit Of The Day</h3>
+            <h4 class="text-uppercase">Strategy / Branding / Design / Interactive</h4>
+            <div class="banner-high-lights row">
+                <div class="bg-gd-info col-md-4">
+                    <div class="bg-gd">
+                        <i class="fab fa-react mb-2"></i>
+                        <h5 class="my-2">ranking</h5>
+                        Lorem ipsum dolor sit amet consectetur elit
+                    </div>
+                </div>
+                <div class="bg-gd-info col-md-4">
+                    <div class="bg-gd active">
+                        <i class="far fa-edit mb-2"></i>
+                        <h5 class="my-2">
+                            feedback</h5>
+                        feed글을 작성하고, 여러 사람에게 feedback을 받으세요!</div>
+                </div>
+                <div class="bg-gd-info col-md-4">
+                    <div class="bg-gd">
+                        <i class="far fa-heart mb-2"></i>
+                        <h5 class="my-2">
+                           market</h5>
+                        Lorem ipsum dolor sit amet consectetur elit</div>
+                </div>
+            </div>
+            <div class="rotate">
+                <a href="#about" class="scroll text-uppercase">
+                       <i class="fas fa-angle-double-down"></i>                  
+            </a>
+            </div>
+
+        </div>
+        <!-- //banner-info-->
+    </div>
+</body>
