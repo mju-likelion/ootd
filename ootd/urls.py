@@ -19,4 +19,5 @@ import ootdApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', ootdApp.views.home, name="home"),
+    path('ranking/', ootdApp.views.ranking, name="ranking"),
 ]

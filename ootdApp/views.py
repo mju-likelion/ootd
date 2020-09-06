@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'home.html')
+
+def ranking(request):
+    return render(request, 'ranking.html')
