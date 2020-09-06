@@ -1,9 +1,9 @@
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',    
-        'NAME': 'ootd',                  
+        'NAME': 'django_insta',                  
         'USER': 'root',                          
-        'PASSWORD': 'dnflwlq1!',                 
+        'PASSWORD': 'kangsanguk',                 
         'HOST': 'localhost',                     
         'PORT': '3306',                          
     }
