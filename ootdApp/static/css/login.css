@@ -1,0 +1,30 @@
+.login{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.card{
+    margin-top : 50px;
+    margin-right: 500px;
+    margin-left: 500px;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.findAccount{
+    text-align: right;
+    color: black;
+    font-size: 14px;
+}
+
+#findid:hover{
+    color: lightgray;
+}
+
+#findpw:hover{
+    color: lightgray;
+}
+
+a { color: inherit; } 

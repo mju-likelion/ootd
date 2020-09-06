@@ -1,38 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Signin Template · Bootstrap</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
-
     <!-- Bootstrap core CSS -->
-<link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css'%}">
+
   </head>
-  <body class="text-center">
-    <form class="form-signin">
-  <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Log in</h1>
-  <label for="inputEmail" class="sr-only">ID</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="ID" required autofocus>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
- 
-</form>
+
+  <body>
+    <h1 class="login">LOGIN</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5>Member Login</h5>
+            <div class="findAccount">
+                <h7>Find</h7>
+                <h7><a id="findid" href="#">ID</a></h7>
+                <h7>/</h7>
+                <h7><a id="findpw" href="#">PW</a></h7>
+            </div>
+            <hr style="border: solid 0.5px lightgray;">
+            
+            <form class="form-signin">
+                <label for="inputId" class="sr-only">ID</label>
+                <input type="text" id="accountId" class="form-control" placeholder="ID" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="accountPw" class="form-control" placeholder="Password" required>   
+            </form>
+
+            <a href="/home"><button class="btn btn-light" type="button">Login</button></a>
+            <a href="#"><button class="btn btn-secondary" type="button">Join</button></a>
+        </div>
+      </div>
 </body>
 </html>
+{% endblock %}

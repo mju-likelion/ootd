@@ -45,16 +45,19 @@
               </button>
                 <div class="collapse navbar-collapse navbar-toggle " id="navbarNavAltMarkup">
                     <ul class="navbar-nav mx-auto">
-                        
                         <li><a class="nav-link text-uppercase" href="about.html">feedback</a></li>
                         <li><a class="nav-link text-uppercase" href="price.html">market</a></li>
                         <li> <a class="nav-link text-uppercase" href="{% url 'ranking'%}">ranking</a></li>
-                        <li> <a class="nav-link text-uppercase" href="{% url 'login'%}">login</a></li>
                     </ul>
                     <div class="top-info text-left">
                         <ul>
                             <li><i class="fas fa-phone-volume"></i> 12345678099</li>
                             <li class="number-phone"><a class="nav-link request text-uppercase font-weight-bold" href="#" data-toggle="modal" data-target="#exampleModalCenter">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                        <ul class="navbar-nav ml-auto">
+                            <li> <a class="nav-link text-uppercase" href="{% url 'login'%}">login</a></li>
                         </ul>
                     </div>
                 </div>
