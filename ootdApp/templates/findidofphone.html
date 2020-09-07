@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/findidofphone.css'%}">
+
+  </head>
+
+  <body>
+    <h1 class="find">FIND ID</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="title">MEMBER ID</h5>
+
+            <div class="type">
+                <label for="inputState">회원유형</label>
+                <select id="inputState" class="typeof">
+                  <option selected>개인</option>
+                  <option selected>사업자</option>
+                </select>
+            </div>  
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="select" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">이메일</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="select" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">휴대폰 번호</label>
+            </div>
+            
+            <form action="find" method="get" class="findmail">
+                <div class="form-group row">
+                    <label for="inputname" class="col-sm-2 col-form-label">이름</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputname">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputemail" class="col-sm-2 col-form-label">휴대폰 번호로 찾기</label>
+                    <div class="col-sm-10">
+                      <input type="phone" class="form-control" id="phone1">-
+                      <input type="phone" class="form-control" id="phone2">-
+                      <input type="phone" class="form-control" id="phone3">
+                    </div>
+                </div>
+            </form>
+
+            <a href="#"><button class="btn btn-light" type="button">확인</button></a>
+        </div>
+      </div>
+</body>
+</html>
+{% endblock %}

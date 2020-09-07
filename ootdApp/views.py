@@ -13,3 +13,16 @@ def login(request) :
 
 def signup(request) :
     return render(request, 'signup.html')
+
+def findid(request) :
+    return render(request, 'findid.html')
+
+def findidofphone(request) :
+    return render(request, 'findidofphone.html')
+
+def findpw(request) :
+    return render(request, 'findpw.html')  
+
+def findpwofphone(request) :
+    return render(request, 'findpwofphone.html')    
+

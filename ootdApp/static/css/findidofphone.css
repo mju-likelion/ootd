@@ -1,0 +1,31 @@
+.find{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.card{
+    margin-top : 50px;
+    margin-right: 500px;
+    margin-left: 500px;
+}
+
+.card-body{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.title{
+    font-size: 24px;
+}
+
+
+.type{
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.findid{
+    margin-top: 30px;
+    font-size: 12px;
+}
+
