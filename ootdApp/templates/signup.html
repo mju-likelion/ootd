@@ -120,7 +120,7 @@
                     </div>
 
                     <div class="col-md-4 mb-2">
-                        <label for="username">비밀번호</label>
+                        <label for="password">Password</label>
                         <div class="input-group">
                             <input type="text" class="form-control" id="password" placeholder="영어 + 숫자" required>
                             <div class="invalid-feedback" style="width: 100%;">
@@ -128,6 +128,18 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-4 mb-2">
+                        <label for="nickname">Nickname</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="nickname" placeholder="사용할 닉네임" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                사용하실 닉네임을 입력하세요.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="mb-2">
 
                     <div class="col-md-4 mb-2">
                         <label for="username">핸드폰번호</label>
@@ -140,56 +152,42 @@
                         </div>
                     </div>
 
-                    <hr class="mb-2">
-
                     <div class="col-md-4 mb-2">
-                        <label for="email">Email <span class="text-muted">(선택)</span></label>
+                        <label for="email">Email </label>
                         <input type="email" class="form-control" id="email" placeholder="you@example.com">
                         <div class="invalid-feedback">
-                            올바른 메일 주소를 입력하세요.
+                            올바른 이메일 주소를 입력하세요.
                         </div>
                     </div>
 
-                    <div class="col-md-8 mb-2">
-                        <label for="address">주소 <span class="text-muted">(선택)</span></label>
-                        <input type="text" class="form-control" id="address" placeholder="ex) oo시 oo구 oo동"" required>
-          <div class=" invalid-feedback">
-                        올바른 주소를 입력하세요.
+                    <hr class="mb-3">
+
+                    <h5 class="col-md-2 mb-2">회원구분</h5>
+
+                    <div class="d-block col-md-2 my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="individual" name="paymentMethod" type="radio" class="custom-control-input"
+                                checked required>
+                            <label class="custom-control-label" for="individual">개인</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="business" name="paymentMethod" type="radio" class="custom-control-input"
+                                required>
+                            <label class="custom-control-label" for="business">사업자</label>
+                        </div>
                     </div>
+
+                    <hr class="mb-2">
+
+                    <a href="{% url 'login'%}"><button class="btn btn-secondary" type="button">Sign up!</button></a>
+
+                </form>
             </div>
+        </div>
 
-            <div class="col-md-8 mb-2">
-                <label for="address2">상세주소 <span class="text-muted">(선택)</span></label>
-                <input type="text" class="form-control" id="address2" placeholder="ex) oo아파트 oo동 oo호">
-            </div>
-
-            <hr class="mb-3">
-
-            <h5 class="col-md-2 mb-2">회원구분</h5>
-
-            <div class="d-block col-md-2 my-3">
-                <div class="custom-control custom-radio">
-                    <input id="individual" name="paymentMethod" type="radio" class="custom-control-input" checked
-                        required>
-                    <label class="custom-control-label" for="individual">개인</label>
-                </div>
-                <div class="custom-control custom-radio">
-                    <input id="business" name="paymentMethod" type="radio" class="custom-control-input" required>
-                    <label class="custom-control-label" for="business">사업자</label>
-                </div>
-            </div>
-
-            <hr class="mb-2">
-            
-            <a href="{% url 'login'%}"><button class="btn btn-secondary" type="button">Sign up!</button></a>
-        
-        </form>
-    </div>
-    </div>
-
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-2">OOTD</p>
-    </footer>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-2">OOTD</p>
+        </footer>
 
 </body>
 
