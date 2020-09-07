@@ -31,15 +31,8 @@
 <body>
     <div class="header-top">
         <header class="mainheader">
-            <nav class="navbar second navbar-expand-lg navbar-light bg-light pagescrollfix">
-                <a class="navbar-brand pagescrolldisplay" href="{% url 'home'%}"><i class="fab fa-magento"></i></a>
-                <div class="collapse navbar-collapse navbar-toggle" id="navbarNavAltMarkup1">
-                    
-                    <a class="nav-link request text-uppercase scrolldemo ml-auto pagescrolldisplay" href="#" data-toggle="modal" data-target="#exampleModalCenter"> Login</a>
-                </div>
-            </nav>
             <nav class="navbar navbar-expand-lg navbar-light bg-light RWDpagescrollfix">
-                <h1><a class="navbar-brand" href="{% url 'home'%}"><i class="fab fa-magento"></i> OOTD</a></h1>
+                <h1><a class="navbar-brand" href="{% url 'home'%}"> OOTD</a></h1>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-toggle" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -49,12 +42,6 @@
                         <li><a class="nav-link text-uppercase" href="price.html">market</a></li>
                         <li> <a class="nav-link text-uppercase" href="{% url 'ranking'%}">ranking</a></li>
                     </ul>
-                    <div class="top-info text-left">
-                        <ul>
-                            <li><i class="fas fa-phone-volume"></i> 12345678099</li>
-                            <li class="number-phone"><a class="nav-link request text-uppercase font-weight-bold" href="#" data-toggle="modal" data-target="#exampleModalCenter">Login</a></li>
-                        </ul>
-                    </div>
                     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                         <ul class="navbar-nav ml-auto">
                             <li> <a class="nav-link text-uppercase" href="{% url 'login'%}">login</a></li>
