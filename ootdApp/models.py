@@ -1,8 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
-
 class Member(models.Model):
     # 아이디
     user_id = models.AutoField(primary_key=True)
@@ -40,16 +37,16 @@ class Feedback(models.Model):
     f_image = models.ImageField()
     # 카테고리
 
-    class Category(models.TextChoices):
-        ALL = 'A'
-        OUTER = 'O'
-        TOP = 'T'
-        BOTTOM = 'B'
-        SHOES = 'S'
-        ACC = 'AC'
-        SIMILAR = 'SI'
-    f_category = models.CharField(
-        max_length=2, choices=Category.choices, default=Category.ALL)
+    #class Category(models.TextChoices):
+    #    ALL = 'A'
+    #    OUTER = 'O'
+    #    TOP = 'T'
+    #    BOTTOM = 'B'
+    #    SHOES = 'S'
+    #    ACC = 'AC'
+    #    SIMILAR = 'SI'
+    #f_category = models.CharField(
+    #    max_length=2, choices=Category.choices, default=Category.ALL)
 
 
 class Comment(models.Model):
@@ -61,3 +58,11 @@ class Comment(models.Model):
     c_feedback = models.ForeignKey('Feedback', on_delete=models.CASCADE)
     # 내용
     c_content = models.CharField(max_length=256)
+
+
+class Image(models.Model):
+    objects = models.Manager()
+    title = models.CharField(max_length=30)
+    description = models.TextField()
+    date = models.DateTimeField(auto_now=True)
+    src = models.ImageField(blank=True)

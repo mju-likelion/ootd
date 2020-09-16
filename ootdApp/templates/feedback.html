@@ -1,0 +1,416 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OOTD :: Outfit Of The Day</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Startled a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    
+    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'css/single.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+</head>
+
+<body>
+    <!-- mian-content -->
+    <section class="mian-content">
+        <!-- /header-top-->
+        <div class="bs-slider-overlay">
+            <div class="header-top">
+                <header class="mainheader">
+                    <nav class="navbar second navbar-expand-lg navbar-light bg-light pagescrollfix">
+                        <a class="navbar-brand pagescrolldisplay" href="index.html"><i class="fab fa-magento"></i></a>
+                        <div class="collapse navbar-collapse navbar-toggle" id="navbarNavAltMarkup1">
+                            
+                            <a class="nav-link request text-uppercase scrolldemo ml-auto pagescrolldisplay" href="#" data-toggle="modal" data-target="#exampleModalCenter"> Login</a>
+                        </div>
+                    </nav>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light RWDpagescrollfix">
+                        <h1><a class="navbar-brand" href="index.html"><i class="fab fa-magento"></i> OOTD</a></h1>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-toggle" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                        <div class="collapse navbar-collapse navbar-toggle " id="navbarNavAltMarkup">
+                            <ul class="navbar-nav mx-auto">
+                                
+                                <li><a class="nav-link text-uppercase" href="feedback.html">feedback</a></li>
+                                <li><a class="nav-link text-uppercase" href="price.html">market</a></li>
+                                <li> <a class="nav-link text-uppercase" href="contact.html">ranking</a></li>
+                            </ul>
+                            <div class="top-info text-left">
+                                <ul>
+                                    <li><i class="fas fa-phone-volume"></i> 12345678099</li>
+                                    <li class="number-phone"><a class="nav-link request text-uppercase font-weight-bold" href="#" data-toggle="modal" data-target="#exampleModalCenter">Login</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <!-- /header-top-->
+                <!-- /banner-info-->
+                <div class="banner-content text-center text-white">
+                </div>
+                <!-- //banner-info-->
+            </div>
+        </div>
+        <!-- //header-top-->
+    </section>
+    <!-- //mian-content-->
+    <!-- /breadcrumb -->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">feedback</li>
+    </ol>
+
+    <!-- //breadcrumb -->
+    <!-- //breadcrumb -->
+    <section class="banner-bottom-wthree py-lg-5 py-md-5 py-3">
+        <div class="container">
+            <div class="inner-sec-w3ls py-lg-5 py-3">
+                <h4 class="sub-tittle text-uppercase text-center">Recent feed</h4>
+                <h3 class="tittle text-center mb-md-5 mb-4"> feed Posts</h3>
+
+                <ul class="nav nav-pills my-md-5 my-3 justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">all</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">outer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">top</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">bottom</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">shoes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">acc</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">similar</a>
+                    </li>
+
+                </ul>
+                <a class="hover-2 btn text-uppercase" href="{% url 'createPage' %}">ADD POST</a>
+               
+                <div class="row">
+                    <!--left-->
+                        <div class="row blog-sec">
+                            {% for image in posts  %}
+                            <div class="col-lg-3 about-in-w3ls blog-grid-info text-left">
+                                <div class="card img">
+                                    <div class="card-body img">
+                                        <img src="../media/{{image.src}}" alt="" class="img-fluid-feed">
+                                        <div class="blog-des blogger">
+                                            <span class="entry-date">{{image.date}}</span>
+                                            <h5 class="card-title text-uppercase mt-2"><a href="single.html">{{image.title}}</a></h5>
+                                            <p class="card-text"> name : csh
+                                            </p>
+                                            <div class="log-in mt-md-3 mt-2">
+                                                <a class="hover-2 btn text-uppercase" href="{% url 'detailPage' image.id %}">Read More</a>
+                                                <a class="hover-2 btn text-uppercase" href="{% url 'updatePage' image.id %}">Edit</a>
+                                                <a class="hover-2 btn text-uppercase" href="{% url 'deleteFuction' image.id %}">Delete</a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                </div>
+            </div>
+            
+            <div class="page-wrapper">
+                <ul class="pagination justify-content-center">
+                    <!-- 이전 페이지 -->
+                    {% if posts.has_previous %}
+                    <li class="page-item">
+                        <a href="?page=1" class="page-link">&laquo;</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" 
+                           href="?page={{ posts.previous_page_number }}" 
+                           tabindex="-1">&lt;
+                        </a>
+                    </li>
+                    {% endif %}
+                    <!-- 페이지 범위 및 현재 페이지 -->
+                    {% for page in paginator_range %}
+                    {% if posts.number == page %}
+                    <li class="page-item active">
+                        <span class="page-link">{{ page }}
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page }}">{{ page }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                    <!-- 다음 페이지 -->
+                    {% if posts.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ posts.next_page_number }}">&gt;</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="?page={{ posts.paginator.num_pages }}" class="page-link">&raquo;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        
+            
+    </section>
+    
+    <!--/single-->
+    <!--/newsletter-->
+    <footer class="newsletter_right_w3_agileits bg-dark pymd-5 py-4">
+        <div class="container">
+            <div class="inner-sec-w3ls py-md-5 py-3">
+                <div class="row mb-md-4 mb-3">
+
+                    <div class="col-md-6 n-right tex-left">
+                        
+                        <div class="copyright mt-md-5 mt-3">
+                            <h2><a class="navbar-brand" href="index.html">
+                                        Startled</a></h2>
+                            <p class="copy-right-w3ls mt-3">© 2018 Startled. All Rights Reserved | Design by
+                                <a href="http://w3layouts.com/"> W3layouts </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 social-info text-right">
+                        <h3 class="tittle foot mb-md-3 mb-4 text-white">Join us in the following social networks</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.</p>
+                        <div class="social-icon footer mt-3">
+                            <ul class="links-nav d-flex justify-content-end">
+                                <li>
+                                    <a class="active" href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+
+                                <li>
+                                    <a href="price.html">Pricing</a>
+                                </li>
+                                <li>
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                            <ul class="social-icons justify-content-end mt-md-5 mt-3">
+                                <li class="mr-1"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                <li class="mx-1"><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                <li class="mx-1"><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                                <li class="mx-1"><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+    <!--//newsletter-->
+
+
+    <!--model-forms-->
+    <!--/Login-->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="login px-4 mx-auto mw-100">
+                        <h5 class="text-center mb-4">Login Now</h5>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label class="mb-2">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-2">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required="">
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit mb-4">Sign In</button>
+                            <p class="text-center pb-4">
+                                <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"> Don't have an account?</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--//Login-->
+    <!--/Register-->
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="login px-4 mx-auto mw-100">
+                        <h5 class="text-center mb-4">Register Now</h5>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label>First name</label>
+
+                                <input type="text" class="form-control" id="validationDefault01" placeholder="" required="">
+                            </div>
+                            <div class="form-group">
+                                <label>Last name</label>
+                                <input type="text" class="form-control" id="validationDefault02" placeholder="" required="">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="mb-2">Password</label>
+                                <input type="password" class="form-control" id="password1" placeholder="" required="">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input type="password" class="form-control" id="password2" placeholder="" required="">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit mb-4">Register</button>
+                            <p class="text-center pb-4">
+                                <a href="#">By clicking Register, I agree to your terms</a>
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--//Register-->
+
+    <!--//model-form-->
+    <!-- js -->
+    <script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 150) {
+                $('nav.pagescrollfix,nav.RWDpagescrollfix').addClass('shrink');
+            } else {
+                $('nav.pagescrollfix,nav.RWDpagescrollfix').removeClass('shrink');
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".dropdown").hover(
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                    $(this).toggleClass('open');
+                },
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
+    </script>
+    <!-- //dropdown nav -->
+
+    <!-- password-script -->
+    <script>
+        window.onload = function() {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+
+        function validatePassword() {
+            var pass2 = document.getElementById("password2").value;
+            var pass1 = document.getElementById("password1").value;
+            if (pass1 != pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');
+            //empty string means no validation error
+        }
+    </script>
+    <!-- //password-script -->
+
+    <!--/ start-smoth-scrolling -->
+    <script src="{% static 'js/move-top.js' %}"></script>
+    <script src="{% static 'js/easing.js' %}"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            /*
+            						var defaults = {
+            							  containerID: 'toTop', // fading element id
+            							containerHoverID: 'toTopHover', // fading element hover id
+            							scrollSpeed: 1200,
+            							easingType: 'linear' 
+            						 };
+            						*/
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!--// end-smoth-scrolling -->
+
+    <!-- /js -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- //js -->
+</body>
+
+</html>

@@ -1,3 +1,7 @@
+from django.contrib.messages import constants as messages_constants
+from django.core.exceptions import ImproperlyConfigured
+from django.conf.urls.static import static
+from django.conf import settings
 from pathlib import Path
 import os, my_settings
 
@@ -9,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = '4q0x@9m=n7r#za%moao$3ewrtkunl0$d7mac*_xy@$8y4jgem^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -110,3 +114,10 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'ootdApp/media')
+
+
+MESSAGE_LEVEL = messages_constants.DEBUG
