@@ -7,6 +7,7 @@
 *.pot
 *.pyc
 myvenv
+my_settings.py
 __pycache__/
 local_settings.py
 db.sqlite3

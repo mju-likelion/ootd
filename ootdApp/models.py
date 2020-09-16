@@ -1,131 +1,63 @@
 from django.db import models
 
 # Create your models here.
-class Member_info(models.Model) :
-    # 좋아요 수
-    like = models.IntegerField(default=0)
-    # 팔로워 수
-    follower = models.IntegerField(default=0)
 
-    class Meta:
-        db_table = 'member_info'
-        unique_together = (("like", "follower"),)
 
-    def __str__(self):
-        return self.like
-
-class Member(models.Model) :
+class Member(models.Model):
     # 아이디
-    user_id = models.TextField(primary_key=True, null=False)
+    user_id = models.AutoField(primary_key=True)
     # 이름
-    name = models.CharField(max_length=20, null=False)
+    name = models.CharField(max_length=20)
     # 비밀번호
-    password = models.CharField(max_length=20, null=False)
+    password = models.CharField(max_length=20)
     # 이메일
-    email = models.EmailField(max_length=200, unique=True, null=False)
+    email = models.EmailField(unique=True)
     # 사용자 타입
-    m_type = models.CharField(max_length=30, null=False)
+    member_type = models.CharField(max_length=30)
     # 성별
-    gender = models.CharField(max_length=10, null=False)
+    gender = models.BooleanField()
     # 생년월일
-    birthdate = models.DateField(null=False)
+    birthdate = models.DateField()
     # 닉네임
-    nickname = models.CharField(max_length=30, null=False, unique=True)
-    # 좋아요 수
-    like = models.ForeignKey(Member_info, on_delete=models.CASCADE, null=True, related_name="Member_like")
-    # 팔로워 수
-    follower = models.ForeignKey(Member_info, on_delete=models.CASCADE, null=True, related_name="Member_follower")
+    nickname = models.CharField(max_length=30, unique=True)
 
-    class Meta:
-        db_table = 'member'
 
-    def __str__(self):
-        return self.user_id
+class Like(models.Model):
+    # 누가 좋아요를 눌렀는지
+    like_from = models.ForeignKey(
+        'Member', on_delete=models.CASCADE, related_name='like_from')
+    # 누구한테 좋아요를 눌렀는지
+    like_to = models.ForeignKey(
+        'Member', on_delete=models.CASCADE, related_name='like_to')
 
-class Feedback(models.Model) :
+
+class Feedback(models.Model):
     # 아이디
-    f_id = models.ForeignKey(Member, on_delete=models.CASCADE, primary_key=True, null=False)
+    f_id = models.AutoField(primary_key=True)
+    # 글쓴이 (유저가 삭제되면 Feedback도 삭제되야 하므로 on_delete는 CASCADE)
+    f_writer = models.ForeignKey('Member', on_delete=models.CASCADE)
+    # 이미지
+    f_image = models.ImageField()
+    # 카테고리
 
+    class Category(models.TextChoices):
+        ALL = 'A'
+        OUTER = 'O'
+        TOP = 'T'
+        BOTTOM = 'B'
+        SHOES = 'S'
+        ACC = 'AC'
+        SIMILAR = 'SI'
+    f_category = models.CharField(
+        max_length=2, choices=Category.choices, default=Category.ALL)
+
+
+class Comment(models.Model):
+    # 아이디
+    c_id = models.AutoField(primary_key=True)
+    # 글쓴이
+    c_writer = models.ForeignKey('Member', on_delete=models.CASCADE)
+    # 어느 글인지
+    c_feedback = models.ForeignKey('Feedback', on_delete=models.CASCADE)
     # 내용
-    f_content = models.TextField(null=False)
-
-    # 이미지
-    f_image = models.ImageField(null=False)
-
-    # 카테고리
-    Category = (
-        ('A','All'),
-        ('O','Outer'),
-        ('T','Top'),
-        ('B','Bottom'),
-        ('S','Shoes'),
-        ('Ac','Acc'),
-        ('S','Similar'),
-    )
-    f_category = models.CharField(max_length=2, choices=Category, null=False)
-
-    # 댓글
-    f_comment = models.TextField(null=True)
-
-    class Meta:
-        db_table = 'feedback'
-
-    def __str__(self):
-        return self.f_id
-
-class Market(models.Model) :
-    # 아이디
-    m_id = models.ForeignKey(Member, on_delete=models.CASCADE, primary_key=True, null=False)
-    
-    # 게시물 내용
-    f_content = models.TextField(null=False)
-
-    # 이미지
-    m_image = models.ImageField(null=False)
-
-    # 카테고리
-    Category = (
-        ('A','All'),
-        ('O','Outer'),
-        ('T','Top'),
-        ('B','Bottom'),
-        ('S','Shoes'),
-        ('Ac','Acc'),
-        ('S','Similar'),
-    )
-    m_category = models.CharField(max_length=2, choices=Category, null=False)
-
-    # 댓글
-    m_comment = models.TextField(null=True)
-
-    # 가격
-    price = models.IntegerField(null=False)
-
-    class Meta:
-        db_table = 'market'
-
-    def __str__(self):
-        return self.m_id
-
-# class Chatting(models.Model) :
-#     # 구매자 아이디
-#     buyer_id = models.ForeignKey(Member, on_delete=models.CASCADE, primary_key=True, null=False)
-
-#     # 판매자 아이디
-#     seller_id = models.ForeignKey(Member, on_delete=models.CASCADE, primary_key=True, null=False)
-
-#     # 채팅 내용
-#     c_content = models.TextField(null=False)
-
-#     def __str__(self):
-#         return self.buyer_id
-
-
-
-
-
-
-
-
-
-
+    c_content = models.CharField(max_length=256)
