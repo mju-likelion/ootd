@@ -37,16 +37,16 @@ class Feedback(models.Model):
     f_image = models.ImageField()
     # 카테고리
 
-    #class Category(models.TextChoices):
-    #    ALL = 'A'
-    #    OUTER = 'O'
-    #    TOP = 'T'
-    #    BOTTOM = 'B'
-    #    SHOES = 'S'
-    #    ACC = 'AC'
-    #    SIMILAR = 'SI'
-    #f_category = models.CharField(
-    #    max_length=2, choices=Category.choices, default=Category.ALL)
+#    class Category(models.TextChoices):
+#        ALL = 'A'
+#        OUTER = 'O'
+#        TOP = 'T'
+#        BOTTOM = 'B'
+#        SHOES = 'S'
+#        ACC = 'AC'
+#        SIMILAR = 'SI'
+#    f_category = models.CharField(
+#        max_length=2, choices=Category.choices, default=Category.ALL)
 
 
 class Comment(models.Model):
